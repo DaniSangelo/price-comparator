@@ -1,7 +1,7 @@
 <?php
 
 use App\Infra\Http\Controllers\ProductController;
-use Illuminate\Http\Request;
+use App\Infra\Http\Middleware\ApiKeyAuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index'])->middleware(ApiKeyAuthMiddleware::class);

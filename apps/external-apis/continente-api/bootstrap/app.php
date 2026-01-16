@@ -1,5 +1,6 @@
 <?php
 
+use App\Exceptions\UnauthorizedException;
 use App\Infra\Http\Middleware\SetHostMiddleware;
 use App\Infra\Http\Middleware\SetRequestIdMiddleware;
 use Illuminate\Foundation\Application;
@@ -18,5 +19,10 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->append(SetRequestIdMiddleware::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+        $exceptions->render(function (Throwable $e) {
+            if ($e instanceof UnauthorizedException) {
+                logger()->error($e->getMessage());
+                return response()->json([], $e->getCode());
+            }
+        });
     })->create();
