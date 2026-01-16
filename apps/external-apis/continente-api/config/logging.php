@@ -1,5 +1,7 @@
 <?php
 
+use App\Infra\Logging\Processors\InstanceProcessor;
+use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -54,7 +56,7 @@ return [
 
         'stack' => [
             'driver' => 'stack',
-            'channels' => explode(',', (string) env('LOG_STACK', 'single')),
+            'channels' => ['stderr'],
             'ignore_exceptions' => false,
         ],
 
@@ -101,8 +103,11 @@ return [
             'handler_with' => [
                 'stream' => 'php://stderr',
             ],
-            'formatter' => env('LOG_STDERR_FORMATTER'),
-            'processors' => [PsrLogMessageProcessor::class],
+            'formatter' => JsonFormatter::class,
+            'processors' => [
+                PsrLogMessageProcessor::class,
+                InstanceProcessor::class
+            ],
         ],
 
         'syslog' => [

@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Infra\Logging\Processors;
+
+use Monolog\LogRecord;
+use Monolog\Processor\ProcessorInterface;
+
+class InstanceProcessor implements ProcessorInterface
+{
+    public function __invoke(LogRecord $record): LogRecord
+    {
+        $record->extra['instance'] = gethostname();
+        $record->extra['service'] = config('app.name', 'continente-api');
+        $record->extra['environment'] = config('app.env', 'local');
+
+        return $record;
+    }
+}
