@@ -22,7 +22,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->render(function (Throwable $e) {
             if ($e instanceof UnauthorizedException) {
                 logger()->error($e->getMessage());
-                return response()->json([], $e->getCode());
+                return response()->noContent($e->getCode());
             }
         });
     })->create();
