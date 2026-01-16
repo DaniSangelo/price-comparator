@@ -1,0 +1,50 @@
+<?php
+
+namespace Database\Factories;
+
+class ProductFakeDataHelper
+{
+    public static array $catalog = [
+        'Frutas' => [
+            'Abacate', 'Abacaxi', 'Acerola', 'Ameixa Preta', 'Ameixa Vermelha', 'Amora', 'Atemoia', 'Banana Nanica', 'Banana Prata', 'Banana Terra', 'Cacau', 'Caju', 'Caqui', 'Carambola', 'Cereja', 'Coco Seco', 'Coco Verde', 'Cupuaçu', 'Damasco', 'Figo', 'Framboesa', 'Goiaba Branca', 'Goiaba Vermelha', 'Graviola', 'Jabuticaba', 'Jaca', 'Kiwi', 'Laranja Lima', 'Laranja Pera', 'Laranja Seleta', 'Limão Siciliano', 'Limão Taiti', 'Maçã Fuji', 'Maçã Gala', 'Maçã Verde', 'Mamão Formosa', 'Mamão Papaia', 'Manga Palmer', 'Manga Rosa', 'Maracujá', 'Melancia', 'Melão Amarelo', 'Melão Cantaloupe', 'Morango', 'Nectarina', 'Pera Portuguesa', 'Pera Willians', 'Pêssego', 'Pitaya', 'Tangerina'
+        ],
+        'Legumes' => [
+            'Abóbora Cabotiá', 'Abóbora Menina', 'Abobrinha Italiana', 'Aipim', 'Alface Americana', 'Alface Crespa', 'Alho', 'Alho-poró', 'Aspargos', 'Batata Asterix', 'Batata Doce', 'Batata Inglesa', 'Batata Yacon', 'Berinjela', 'Beterraba', 'Brócolis Ninja', 'Brócolis Ramoso', 'Cebola Branca', 'Cebola Roxa', 'Cenoura', 'Chuchu', 'Cogumelo Paris', 'Cogumelo Shimeji', 'Couve-flor', 'Ervilha Tortinha', 'Espinafre', 'Gengibre', 'Grão-de-bico', 'Inhame', 'Jiló', 'Mandioquinha', 'Mandioca', 'Maxixe', 'Milho Verde', 'Nabos', 'Palmito', 'Pepino Japonês', 'Pepino Saladão', 'Pimenta Biquinho', 'Pimenta Dedinho de Moça', 'Pimentão Amarelo', 'Pimentão Colorido', 'Pimentão Red', 'Pimentão Verde', 'Quiabo', 'Rabanete', 'Repolho Branco', 'Repolho Roxo', 'Tomate Cereja', 'Tomate Saladete'
+        ],
+        'Carnes' => [
+            'Acém Moído', 'Alcatra Inteira', 'Aranha do Alcatra', 'Baby Beef', 'Bacon Defumado', 'Bisteca Suína', 'Alcatra em Bifes', 'Contra Filé', 'Copa Lombo', 'Coração de Frango', 'Costela Bovina', 'Costela Suína', 'Coxa de Frango', 'Coxão Duro', 'Coxão Mole', 'Cupim', 'Entrecot', 'Filé de Frango', 'Filé Mignon', 'Fraldinha', 'Lagarto', 'Linguiça Alheira', 'Linguiça Calabresa', 'Linguiça Cuiabana', 'Linguiça de Frango', 'Linguiça de Pernil', 'Linguiça Toscana', 'Lombo Suína', 'Maminha', 'Músculo Bovina', 'Picanha Argentina', 'Picanha Nacional', 'Paleta Bovina', 'Patinho Moído', 'Peito de Frango', 'Peito de Peru', 'Pernil Suío', 'Pescoço de Peru', 'Ponta de Peito', 'Prime Rib', 'Salsicha Hot Dog', 'Salsicha Viena', 'Sobre-coxa de Frango', 'T-Bone Steak', 'Toucinho', 'Tulipa de Frango', 'Costelinha BBQ', 'Matambre', 'Ossobuco', 'Rabo Bovino'
+        ],
+        'Peixes' => [
+            'Atum em Postas', 'Bacalhau Gadus Morhua', 'Bacalhau Ling', 'Bacalhau Saithe', 'Bagre', 'Bonito', 'Camarão Cinza', 'Camarão Rosa', 'Camarão Sete Barbas', 'Caranguejo', 'Cavala', 'Corvina', 'Dourado', 'Filé de Abadejo', 'Filé de Merluza', 'Filé de Pescada', 'Filé de Polaca', 'Filé de Saint Peter', 'Filé de Tilápia', 'Garoupa', 'Lagosta', 'Lambari', 'Linguado', 'Lula em Anéis', 'Manjuba', 'Marisco', 'Mexilhão', 'Namorado', 'Pacu', 'Panga', 'Pintado', 'Polvo', 'Porquinho', 'Robalo', 'Salmão Inteiro', 'Salmão em Postas', 'Salmão em Filé', 'Sardinha Inteira', 'Sardinha em Filé', 'Sururu', 'Tainha', 'Tambaqui', 'Truta', 'Tucunaré', 'Vieira', 'Xaréu', 'Anchova', 'Cavalinha', 'Manjuba Empanada'
+        ],
+        'Laticínios' => [
+            'Iogurte Desnatado', 'Iogurte Integral', 'Iogurte de Morango', 'Iogurte de Grego', 'Iogurte de Mel', 'Iogurte de Coco', 'Leite Condensado', 'Leite Desnatado', 'Leite Integral', 'Leite Semidesnatado', 'Leite sem Lactose', 'Manteiga com Sal', 'Manteiga sem Sal', 'Margarina com Sal', 'Margarina sem Sal', 'Petit Suisse', 'Queijo Alfenas', 'Queijo Brie', 'Queijo Camembert', 'Queijo Canastra', 'Queijo Cheddar', 'Queijo Coalho', 'Queijo Cottage', 'Queijo Cream Cheese', 'Queijo Gorgonzola', 'Queijo Gouda', 'Queijo Minas Frescal', 'Queijo Minas Padrão', 'Queijo Mussarela', 'Queijo Parmesão Ralado', 'Queijo Parmesão Peça', 'Queijo Prato', 'Queijo Provolone', 'Queijo Reino', 'Queijo Ricota', 'Queijo Roquefort', 'Queijo de Cabra', 'Requeijão Cremoso', 'Requeijão Light', 'Ricota Fresca', 'Sobremesa Láctea Chocolate', 'Sobremesa Láctea Baunilha', 'Creme de Leite', 'Coalhada Seca', 'Coalhada Fresca', 'Leite de Cabra', 'Kefir', 'Bebida Láctea', 'Chantilly', 'Whey Protein Pronto'
+        ],
+        'Padaria' => [
+            'Baguete Francesa', 'Bisnaguinha', 'Bolo de Banana', 'Bolo de Cenoura', 'Bolo de Chocolate', 'Bolo de Fubá', 'Bolo de Laranja', 'Bolo de Milho', 'Brioche', 'Broa de Milho', 'Carolinas', 'Ciabatta', 'Croissant de Chocolate', 'Croissant de Presunto', 'Donut de Doce de Leite', 'Donut de Morango', 'Enroladinho de Salsicha', 'Esfiha de Carne', 'Esfiha de Frango', 'Focaccia', 'Folhado de Maçã', 'Mini Pizza de Mussarela', 'Pão Australiano', 'Pão Caseiro', 'Pão Doce', 'Pão Francês', 'Pão Integral', 'Pão Sovado', 'Pão de Alho', 'Pão de Batata', 'Pão de Centeio', 'Pão de Forma', 'Pão de Hambúrguer', 'Pão de Hot Dog', 'Pão de Ló', 'Pão de Mel', 'Pão de Milho', 'Pão de Queijo Mini', 'Pão de Queijo Recheado', 'Pastel de Belém', 'Petit Four', 'Pizza de Calabresa', 'Pizza de Portuguesa', 'Pretzels', 'Quiche de Alho Poró', 'Quiche de Queijo', 'Rosca de Coco', 'Sonho de Creme', 'Torta de Frango', 'Torta de Palmito'
+        ],
+        'Congelados' => [
+            'Açaí em Pote', 'Almôndegas de Carne', 'Batata Frita Congelada', 'Batata Noisette', 'Churros de Doce de Leite', 'Coxinha de Frango', 'Empanado de Frango', 'Ervilha Congelada', 'Filé de Peixe Congelado', 'Hambúrguer Bovino', 'Hambúrguer de Frango', 'Hambúrguer de Picanha', 'Hambúrguer Vegetariano', 'Isca de Peixe', 'Kibe Congelado', 'Lasanha de Bolonhesa', 'Lasanha de Frango', 'Lasanha de Quatro Queijos', 'Mandioca Congelada', 'Milho Congelado', 'Mini Coxinha', 'Mini Pastéis', 'Mini Salgadinhos Variados', 'Mistura de Vegetais', 'Onions Rings', 'Pão de Queijo Congelado', 'Pizza Congelada de Bacon', 'Pizza Congelada de Frango', 'Pizza Congelada de Mussarela', 'Polpa de Abacaxi', 'Polpa de Acerola', 'Polpa de Caju', 'Polpa de Graviola', 'Polpa de Maracujá', 'Polpa de Morango', 'Prato Pronto Arroz e Feijão', 'Prato Pronto Escondidinho', 'Prato Pronto Estrogonofe', 'Prato Pronto Macarronada', 'Prato Pronto Yakisoba', 'Picolé de Chocolate', 'Picolé de Fruta', 'Sorvete de Baunilha', 'Sorvete de Chocolate', 'Sorvete de Creme', 'Sorvete de Morango', 'Sorvete de Napolitano', 'Sorvete de Passas ao Rum', 'Torta Holandesa Congelada', 'Waffles'
+        ],
+        'Bebidas' => [
+            'Água Mineral com Gás', 'Água Mineral sem Gás', 'Água de Coco', 'Água Tônica', 'Aguardente', 'Cachaça Artesanal', 'Café em Grãos', 'Café Moído', 'Café Solúvel', 'Cappuccino em Pó', 'Cerveja Artesanal', 'Cerveja Lager', 'Cerveja Pilsen', 'Cerveja Puro Malte', 'Cerveja sem Álcool', 'Chá Branco', 'Chá Gelado de Limão', 'Chá Gelado de Pêssego', 'Chá Mate', 'Chá Preto', 'Chá de Camomila', 'Chá de Hortelã', 'Energético', 'Espumante Brut', 'Espumante Moscatel', 'Gin', 'Isotônico de Frutas Cítricas', 'Isotônico de Tangerina', 'Isotônico de Uva', 'Néctar de Laranja', 'Néctar de Pêssego', 'Néctar de Uva', 'Refrigerante Cola', 'Refrigerante Guaraná', 'Refrigerante Laranja', 'Refrigerante Limão', 'Refrigerante Zero', 'Rum', 'Sake', 'Suco de Caju Concentrado', 'Suco de Laranja Integral', 'Suco de Maçã Integral', 'Suco de Maracujá Concentrado', 'Suco de Tomate', 'Suco de Uva Integral', 'Tequila', 'Vermute', 'Vinho Branco', 'Vinho Rose', 'Vinho Tinto'
+        ],
+        'Mercearia' => [
+            'Achocolatado em Pó', 'Açúcar Confeiteiro', 'Açúcar Cristal', 'Açúcar Demerara', 'Açúcar Mascavo', 'Açúcar Refinado', 'Adocante Líquido', 'Arroz Arbóreo', 'Arroz Branco', 'Arroz Integral', 'Arroz Parboilizado', 'Aveia em Flocos', 'Azeite de Dendê', 'Azeite de Oliva Extra Virgem', 'Azeite de Oliva Virgem', 'Azeitona Preta', 'Azeitona Verde', 'Batata Palha', 'Biscoito Água e Sal', 'Biscoito Maizena', 'Biscoito Recheado Chocolate', 'Biscoito Recheado Morango', 'Biscoito de Polvilho', 'Café a Vácuo', 'Canela em Pó', 'Catchup', 'Chocolate em Barra ao Leite', 'Chocolate em Barra Meio Amargo', 'Creme de Avelã', 'Ervilha em Conserva', 'Farelo de Trigo', 'Farinha de Mandioca', 'Farinha de Milho', 'Farinha de Rosca', 'Farinha de Trigo', 'Feijão Branco', 'Feijão Carioca', 'Feijão Fradinho', 'Feijão Preto', 'Gelatina de Morango', 'Granola', 'Maionese', 'Milho para Pipoca', 'Molho de Pimenta', 'Molho de Tomate', 'Mostarda', 'Óleo de Girassol', 'Óleo de Milho', 'Óleo de Soja', 'Tempero Pronto'
+        ],
+        'Limpeza' => [
+            'Água Sanitária', 'Álcool 70', 'Álcool Gel', 'Amaciante Concentrado', 'Amaciante Tradicional', 'Desengordurante Cozinha', 'Desengordurante Banheiro', 'Desinfetante de Eucalipto', 'Desinfetante de Lavanda', 'Desinfetante de Limão', 'Desinfetante de Pinho', 'Detergente de Coco', 'Detergente de Limão', 'Detergente de Maçã', 'Detergente Neutro', 'Esponja de Aço', 'Esponja de Limpeza Multiuso', 'Inseticida Aerossol', 'Inseticida Elétrico', 'Limpa Alumínio', 'Limpa Forno', 'Limpa Grelha', 'Limpa Pisos', 'Limpa Vidros', 'Limpador Multiuso', 'Lustra Móveis', 'Naftalina', 'Odorizador de Ambientes', 'Pá de Lixo', 'Pano de Chão', 'Pano de Copa', 'Pano Multiuso', 'Papel Higiênico Folha Dupla', 'Papel Higiênico Folha Simples', 'Pastilha Sanitária', 'Pedra Sanitária', 'Pregador de Roupas', 'Removedor', 'Sabão em Barra de Coco', 'Sabão em Barra Neutro', 'Sabão em Pó', 'Sabão Líquido para Roupas', 'Saco de Lixo 100L', 'Saco de Lixo 30L', 'Saco de Lixo 50L', 'Saponáceo Cremoso', 'Saponáceo em Pó', 'Tira Manchas em Pó', 'Tira Manchas Líquido', 'Vassoura de Pelo'
+        ]
+    ];
+
+    public static function getRandomProduct(): array
+    {
+        $category = array_rand(self::$catalog);
+        $name = self::$catalog[$category][array_rand(self::$catalog[$category])];
+        
+        return [
+            'name' => $name,
+            'category' => $category
+        ];
+    }
+}
