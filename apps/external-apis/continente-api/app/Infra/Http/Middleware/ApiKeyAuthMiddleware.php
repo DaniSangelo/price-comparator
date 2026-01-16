@@ -11,8 +11,7 @@ class ApiKeyAuthMiddleware {
     public function handle(Request $request, Closure $next)
     {
         $apiKey = $request->header('X-API-KEY');
-
-        if (blank($apiKey) || $apiKey !== (string) Utils::base64Decode(getenv('APP_API_KEY'))) {
+        if (blank($apiKey) || $apiKey !== (string) Utils::base64Decode(config('app.api_key'))) {
             throw new UnauthorizedException('Unauthorized: Invalid API Key');
         }
 
