@@ -38,6 +38,9 @@ services:
       CACHE_STORE: array
       SESSION_DRIVER: array
 
+      LOG_CHANNEL: stack
+      LOG_LEVEL: debug
+
   continente-lb:
     image: nginx:1.25-alpine
     container_name: continente-lb
