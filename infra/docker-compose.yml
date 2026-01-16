@@ -1,0 +1,53 @@
+services:
+  continente-mysql:
+    image: mysql:8.0
+    container_name: continente-mysql
+    environment:
+      MYSQL_DATABASE: continente
+      MYSQL_USER: continente
+      MYSQL_PASSWORD: continente
+      MYSQL_ROOT_PASSWORD: continente
+    ports:
+      - "3307:3306"
+    volumes:
+      - continente_mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  continente-api:
+    build:
+      context: ../apps/external-apis/continente-api
+    container_name: continente-api
+    depends_on:
+      continente-mysql:
+        condition: service_healthy
+    environment:
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: base64:1F+8HbPX662qfpi2AUs3hkslAN5c8SKKpTpzD14g8kc=
+      DB_CONNECTION: mysql
+      DB_HOST: continente-mysql
+      DB_PORT: 3306
+      DB_DATABASE: continente
+      DB_USERNAME: continente
+      DB_PASSWORD: continente
+      APP_URL: http://localhost:3001
+
+    ports:
+      - "3001:80"
+
+  # continente-lb:
+  #   image: nginx:1.25-alpine
+  #   container_name: continente-lb
+  #   depends_on:
+  #     - continente-api
+  #   ports:
+  #     - "3001:80"
+  #   volumes:
+  #     - ./nginx/continente-lb.conf:/etc/nginx/conf.d/default.conf:ro
+
+volumes:
+  continente_mysql_data:
