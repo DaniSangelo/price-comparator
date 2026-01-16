@@ -20,4 +20,14 @@ class SearchProductsOutput
             'data' => array_map(fn($p) => $p->toArray(), $this->products),
         ];
     }
+
+    public function products(): array
+    {
+        return $this->products;
+    }
+
+    public function count(): int
+    {
+        return count($this->products);
+    }
 }

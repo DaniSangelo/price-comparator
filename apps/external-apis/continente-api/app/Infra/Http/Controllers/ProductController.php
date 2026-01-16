@@ -17,8 +17,7 @@ class ProductController extends Controller
             logger()->info('Start search products', $request->validated());
             $input = new SearchProductsInput($request->validated());
             $output = $this->searchProductsUseCase->execute($input);
-            $clone = clone $output;
-            logger()->info('End search products', array_slice($clone->toArray(), 0, 10));
+            logger()->info('End search products', ['total' => $output->count()]);
             return response()->json($output->toArray(), Response::HTTP_OK);
         } catch (\Exception $e) {
             logger()->error('Error search products', ['message' => $e->getMessage()]);
