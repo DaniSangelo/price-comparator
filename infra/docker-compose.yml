@@ -40,6 +40,7 @@ services:
 
       LOG_CHANNEL: stack
       LOG_LEVEL: debug
+      APP_API_KEY: d3gpc014VzklKmYjRkVgQTN3QnojazZZJCZCIWg4XkVEZg==
 
   continente-lb:
     image: nginx:1.25-alpine
