@@ -1,0 +1,20 @@
+services:
+  aldi-postgres:
+    image: postgres:16
+    container_name: aldi-postgres
+    environment:
+      POSTGRES_DB: aldi
+      POSTGRES_USER: aldi
+      POSTGRES_PASSWORD: aldi
+    ports:
+      - "5434:5432"
+    volumes:
+      - aldi_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aldi -d aldi"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  aldi_postgres_data:
