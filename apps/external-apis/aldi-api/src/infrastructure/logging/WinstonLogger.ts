@@ -1,6 +1,8 @@
 import { ILogger } from "../../domain/ports/ILogger";
 import winston from "winston";
 import { getRequestContext } from "../http/context/requestContext";
+import os from "node:os";
+
 const { combine, json, timestamp, colorize, printf } = winston.format;
 const { Console } = winston.transports;
 
@@ -27,6 +29,7 @@ export class WinstonLogger implements ILogger {
             transports:[ new Console()],
             defaultMeta: {
                 service: process.env.APP_NAME,
+                instance: os.hostname(),
                 env: process.env.NODE_ENV,
             }
         })
@@ -36,6 +39,7 @@ export class WinstonLogger implements ILogger {
         const ctx = getRequestContext();
         this.logger.info(message, {...context, ...ctx});
     }
+
     error(message: string, context?: Record<string, any>): void {
         const ctx = getRequestContext();
         this.logger.error(message, {...context, ...ctx});
