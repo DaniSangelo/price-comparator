@@ -12,7 +12,7 @@ export class WinstonLogger implements ILogger {
             format: combine(
                 json(),
                 timestamp({
-                    format: 'DD-MM-YYYY HH:mm:ss',
+                    format: 'YYYY-MM-DD HH:mm:ss',
                 }),
                 colorize({all: true}),
                 printf( ({ level, message, timestamp , ...metadata}) => {

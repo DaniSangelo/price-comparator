@@ -4,6 +4,6 @@ import { makeProductControllerFactory } from "../../../factories/makeProductCont
 const productRouter = Router()
 const controller = makeProductControllerFactory();
 
-productRouter.get('/products', controller.index);
+productRouter.get('', controller.index);
 
 export default productRouter;
