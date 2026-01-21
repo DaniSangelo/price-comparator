@@ -7,7 +7,7 @@ export function setRequestIdMiddleware(req: Request, res: Response, next: NextFu
     req.headers['x-request-id'] = requestId;
     res.locals.requestId = requestId;
     res.header('x-request-id', requestId);
-    requestContext.run({ requestId: requestId as string, hostName: req.hostname }, () => {
+    requestContext.run({ requestId: requestId as string }, () => {
         next()
     });
 }

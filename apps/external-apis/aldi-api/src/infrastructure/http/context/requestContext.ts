@@ -3,7 +3,6 @@ const { AsyncLocalStorage } = asyncHooks;
 
 type RequestContext = {
     requestId: string;
-    hostName: string;
 }
 
 export const requestContext = new AsyncLocalStorage<RequestContext>();
@@ -13,5 +12,5 @@ export function getRequestContext() {
     if(a) {
         return a;
     }
-    return { requestId: '', hostName: '' };
+    return { requestId: '' };
 }
