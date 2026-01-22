@@ -1,17 +1,22 @@
 # Monorepo Project
 
-This repository hosts a microservices-based architecture for a grocery price comparison platform. It aggregates product data from multiple external retailers to provide competitive analysis and insights.
+This repository hosts a microservices-based architecture for a grocery price comparison platform. It aggregates product data from multiple external retailers to give to the end-user the ability to compare prices.
 
-## Tech Stack
+## Tech Stack 💻
 
 ### Core
 
 ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
 ![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+</br>
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+</br>
+![.NET Core](https://img.shields.io/badge/.net%20core-%230db7ed.svg?style=for-the-badge&logo=.net&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-%230db7ed.svg?style=for-the-badge&logo=csharp&logoColor=white)
+![Entity Framework](https://img.shields.io/badge/entity%20framework-%230db7ed.svg?style=for-the-badge&logo=.net&logoColor=white)
 
 ### Infrastructure
 
@@ -31,6 +36,7 @@ This repository hosts a microservices-based architecture for a grocery price com
 - **apps/external-apis**: Contains API services. Dedicated services for fetching and normalizing data from specific retailers:
   - `continente-api`: Laravel 12 API service.
   - `aldi-api`: Node.js/TypeScript API service using Drizzle ORM.
+  - `lidl-api`: .NET Core API service using Entity Framework with SQL Server.
 - **infra**: Infrastructure configurations (Docker Compose, Nginx, Observability).
 
 ## How to Run
