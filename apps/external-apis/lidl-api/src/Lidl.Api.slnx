@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Lidl.Api/Lidl.Api.csproj" />
+  <Project Path="Lidl.Application/Lidl.Application.csproj" />
+  <Project Path="Lidl.Domain/Lidl.Domain.csproj" />
+  <Project Path="Lidl.Infrastructure/Lidl.Infrastructure.csproj" />
+  <Project Path="Lidl.Tests/Lidl.Tests.csproj" />
+</Solution>
