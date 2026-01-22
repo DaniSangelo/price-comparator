@@ -4,6 +4,9 @@
   "main": "main.js",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "build": "tsc",
     "start": "node dist/main.js",
     "db:generate": "drizzle-kit generate",
@@ -26,9 +29,11 @@
     "@types/express": "^5.0.6",
     "@types/node": "^25.0.9",
     "@types/pg": "^8.16.0",
+    "@vitest/coverage-v8": "^4.0.17",
     "drizzle-kit": "^0.31.8",
     "ts-node": "^10.9.2",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17"
   }
 }
