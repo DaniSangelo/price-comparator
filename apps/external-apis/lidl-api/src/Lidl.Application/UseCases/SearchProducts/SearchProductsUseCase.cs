@@ -17,7 +17,7 @@ public sealed class SearchProductsUseCase
 
     public async Task<SearchProductsOutput> ExecuteAsync(SearchProductsInput input, CancellationToken cancellationToken = default)
     {
-        _logger.LogInformation("Searching products", input);
+        _logger.LogInformation("Searching products {Input}", input);
         var page = Math.Max(1, input.Page);
         var limit = Math.Clamp(input.Limit, 1, 200);
         input.Page = page;
