@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Lidl.Application\Lidl.Application.csproj" />
     <ProjectReference Include="..\Lidl.Domain\Lidl.Domain.csproj" />
+    <ProjectReference Include="..\Lidl.Infrastructure\Lidl.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
