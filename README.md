@@ -66,6 +66,16 @@ docker-compose -f infra/docker-compose.aldi.yml up -d --build
 
 Access the application at [http://localhost:3333](http://localhost:3333).
 
+#### Lidl API
+
+Start the service:
+
+```bash
+docker-compose -f infra/docker-compose.lidl.yml up -d --build
+```
+
+Access the application at [http://localhost:3004](http://localhost:3004).
+
 ### Observability Stack
 
 To run the observability stack (Loki, Promtail, Grafana):
@@ -76,3 +86,7 @@ docker-compose -f infra/docker-compose.observability.yml up -d
 
 - **Grafana**: [http://localhost:3000](http://localhost:3000) (User: `admin`, Password: `admin`)
 - **Loki**: [http://localhost:3100](http://localhost:3100)
+
+1. Access `http://localhost:3000`.
+2. Go to Connections -> **Data sources**.
+3. Search for *Loki*, and set `http://loki:3100` in the URL field.
