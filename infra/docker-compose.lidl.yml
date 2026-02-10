@@ -15,5 +15,31 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+
+  lidl-api:
+    build:
+      context: ..
+      dockerfile: apps/external-apis/lidl-api/src/Lidl.Api/Dockerfile
+    container_name: lidl-api  
+    depends_on:
+      lidl-mssql:
+        condition: service_healthy
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://0.0.0.0:8080
+      ConnectionStrings__Default: "Server=lidl-mssql,1433;Database=lidl;User Id=sa;Password=Password123!;TrustServerCertificate=True;"
+      APP_NAME: lidl-api
+    ports:
+      - "3004:8080"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "wget -qO- http://localhost:8080/health > /dev/null || exit 1"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
 volumes:
   lidl_mssql_data:
