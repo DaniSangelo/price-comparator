@@ -18,16 +18,16 @@ class SearchProductsUseCaseTest extends TestCase
         $repo->shouldReceive('search')
             ->once()
             ->with('milk', 1)
-            ->andReturn([
+            ->andReturn(
                 new ProductEntity(
                     externalId: 'CNT-001',
                     name: 'Leite Meio-Gordo 1L',
                     category: 'Laticínios',
-                    priceCents: 109,
+                    priceCents: 109.20,
                     currency: 'EUR',
                     available: true
                 )
-            ]);
+            );
 
         $useCase = new SearchProductsUseCase($repo);
         $input = new SearchProductsInput(['query' => 'milk', 'page' => 1]);
