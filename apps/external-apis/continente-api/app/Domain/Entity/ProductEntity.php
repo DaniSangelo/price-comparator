@@ -8,7 +8,7 @@ class ProductEntity
         private string $externalId,
         private string $name,
         private ?string $category,
-        private int $priceCents,
+        private float $priceCents,
         private string $currency,
         private bool $available
     ) {}

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('external_id', 50)->unique();
             $table->string('name', 255);
             $table->string('category', 120)->nullable();
-            $table->float('price_cents', 10, 2);
+            $table->float('price_cents', 2);
             $table->char('currency', 3)->default('EUR');
             $table->boolean('available')->default(true);
             $table->timestamps();
