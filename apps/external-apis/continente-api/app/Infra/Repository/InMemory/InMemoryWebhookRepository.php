@@ -26,4 +26,18 @@ class InMemoryWebhookRepository implements WebhookRepositoryInterface
 
         return $webhook;
     }
+
+    public function all()
+    {
+        return array_map(function($webhook) {
+            return new WebhookEntity(
+                url: $webhook->url,
+                method: $webhook->method,
+                secret: $webhook->secret,
+                event: $webhook->event,
+                isActive: $webhook->is_active,
+                clientId: $webhook->id,
+            );
+        }, $this->webhooks);
+    }
 }

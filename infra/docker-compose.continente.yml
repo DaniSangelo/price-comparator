@@ -52,5 +52,12 @@ services:
     volumes:
       - ./nginx/continente-lb.conf:/etc/nginx/conf.d/default.conf:ro
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
 volumes:
   continente_mysql_data:

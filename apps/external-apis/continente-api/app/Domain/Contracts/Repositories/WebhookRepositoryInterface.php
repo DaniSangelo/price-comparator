@@ -8,6 +8,7 @@ use App\Domain\Entity\WebhookEntity;
 interface WebhookRepositoryInterface
 {
     public function create(WebhookSubscriptionInput $input): WebhookEntity;
+    public function all();
     // public function update(WebhookSubscriptionInput $input): void;
     // public function delete(string $clientId): void;
 }

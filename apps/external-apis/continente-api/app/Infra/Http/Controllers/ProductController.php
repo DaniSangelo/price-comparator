@@ -2,14 +2,17 @@
 
 namespace App\Infra\Http\Controllers;
 
+use App\Application\UseCases\ProductUpdate\ProductUpdateUseCase;
+use App\Application\UseCases\ProductUpdate\UpdateProductInput;
 use App\Application\UseCases\SearchProducts\SearchProductsInput;
 use App\Application\UseCases\SearchProducts\SearchProductsUseCase;
 use App\Infra\Http\Requests\SearchProductsRequest;
-use Illuminate\Http\Response;
+use App\Infra\Http\Requests\UpdateProductRequest;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller
 {
-    public function __construct(private SearchProductsUseCase $searchProductsUseCase) {}
+    public function __construct(private SearchProductsUseCase $searchProductsUseCase, private ProductUpdateUseCase $productUpdateUseCase) {}
 
     public function index(SearchProductsRequest $request)
     {
@@ -25,5 +28,12 @@ class ProductController extends Controller
                 'error' => $e->getMessage()
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
+    }
+
+    public function update(UpdateProductRequest $request)
+    {
+        $input = new UpdateProductInput($request->validated());
+        $this->productUpdateUseCase->execute($input);
+        return response()->json([], Response::HTTP_NO_CONTENT);
     }
 }

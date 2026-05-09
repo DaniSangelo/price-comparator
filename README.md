@@ -90,3 +90,9 @@ docker-compose -f infra/docker-compose.observability.yml up -d
 1. Access `http://localhost:3000`.
 2. Go to Connections -> **Data sources**.
 3. Search for *Loki*, and set `http://loki:3100` in the URL field.
+
+### RabbitMQ
+
+http://localhost:15672
+
+(user/pass: guest/guest)

@@ -21,4 +21,20 @@ class EloquentWebhookRepository implements WebhookRepositoryInterface
             $webhookSubscription->is_active,
         );
     }
+
+    public function all()
+    {
+        $webhooks = WebhookSubscription::all();
+
+        return array_map(function($webhook) { 
+            return new WebhookEntity(
+                $webhook->client_id,
+                $webhook->url,
+                $webhook->method,
+                $webhook->secret,
+                $webhook->event,
+                $webhook->is_active,
+            );
+        }, $webhooks->toArray());
+    }
 }
